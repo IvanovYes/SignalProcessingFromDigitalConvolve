@@ -87,6 +87,7 @@ if __name__ == "__main__":
     kernelToConvolve = GenerateFormatKernelToConvolve(len(signal), 1/dt, type="HR")
     signalToConvolve = GenerateFormatSignalToConvolve(signal, kernelToConvolve)
     signal_conv = TransformFromConvolve(signalToConvolve, kernelToConvolve)
+
     plt.figure(figsize=(15, 20))
     plt.plot(t, signal, 'b-', linewidth=2, label='Исходный сигнал')
     plt.step(t, signal_conv, 'r', linewidth=2, label='Результат свертки')
